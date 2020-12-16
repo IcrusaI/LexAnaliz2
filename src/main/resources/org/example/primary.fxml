@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10.0" pickOnBounds="false" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Label contentDisplay="BOTTOM" text="Ключевые слова (1)">
+            <graphic>
+                <ListView fx:id="keywordsList" focusTraversable="false" prefHeight="235.0" prefWidth="140.0" />
+            </graphic>
+        </Label>
+        <Label contentDisplay="BOTTOM" text="Разделители (2)" GridPane.columnIndex="3">
+            <graphic>
+                <ListView fx:id="separatorsList" focusTraversable="false" prefHeight="235.0" prefWidth="140.0" />
+            </graphic>
+        </Label>
+        <Label contentDisplay="BOTTOM" text="Идентификаторы (3)" GridPane.rowIndex="1">
+            <graphic>
+                <ListView fx:id="variablesList" focusTraversable="false" prefHeight="235.0" prefWidth="140.0" />
+            </graphic>
+        </Label>
+        <Label contentDisplay="BOTTOM" text="Числа (4)" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <graphic>
+                <ListView fx:id="numbersList" focusTraversable="false" prefHeight="235.0" prefWidth="140.0" />
+            </graphic>
+        </Label>
+        <Label contentDisplay="BOTTOM" text="Исходный код" GridPane.columnIndex="2" GridPane.rowSpan="2">
+            <graphic>
+                <TextArea fx:id="code" prefHeight="500.0" prefWidth="408.0" />
+            </graphic>
+        </Label>
+        <Label contentDisplay="BOTTOM" text="Результаты анализа" GridPane.columnSpan="4" GridPane.rowIndex="2">
+            <graphic>
+                <TextArea fx:id="analyzerResult" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="709.0" />
+            </graphic>
+        </Label>
+      <Button fx:id="checkButton" mnemonicParsing="false" onAction="#validateProgram" text="Проверить" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    </children>
+</GridPane>
